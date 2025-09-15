@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Língua dos Antigos - Banco de Dados</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Spectral:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">LÍNGUA DOS ANTIGOS</h1>
+            <p class="subtitle">BANCO DE DADOS ARCANO</p>
+            <p class="subtitle">SISTEMA DE CATALOGAÇÃO DE SÍMBOLOS RÚNICOS</p>
+            
+            <!-- Navigation Tabs -->
+            <nav class="main-nav">
+                <button class="nav-tab active" data-tab="symbols">
+                    <span class="nav-icon">📜</span>
+                    SÍMBOLOS
+                </button>
+                <button class="nav-tab" data-tab="lore">
+                    <span class="nav-icon">📚</span>
+                    LORE
+                </button>
+                <button class="nav-tab" data-tab="add-rune">
+                    <span class="nav-icon">✨</span>
+                    ADICIONAR SÍMBOLO
+                </button>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <!-- Symbols Tab Content -->
+            <div id="symbols-content" class="tab-content active">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <input type="text" placeholder="BUSCAR SÍMBOLOS..." class="search-input" id="symbol-search">
+                        <button class="category-dropdown">
+                            <span>TODAS AS CATEGORIAS</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="runic">SÍMBOLOS RÚNICOS</button>
+                        <button class="filter-tab" data-filter="origin">PROJETO ORIGEM</button>
+                    </div>
+                </div>
+
+                <div class="symbols-grid" id="symbols-grid">
+                <!-- Chama -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">1</div>
+                    <div class="symbol-icon">🔥</div>
+                    <h3 class="symbol-name">CHAMA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-orange">CENTELHA</span>
+                        <span class="tag tag-orange">ENERGIA</span>
+                    </div>
+                    <p class="symbol-description">Uma chama (centelha)</p>
+                </div>
+
+                <!-- Coroa -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">2</div>
+                    <div class="symbol-icon">👑</div>
+                    <h3 class="symbol-name">COROA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-orange">CONTROLE</span>
+                        <span class="tag tag-orange">PODER</span>
+                    </div>
+                    <p class="symbol-description">Uma coroa estilizado (Controle)</p>
+                </div>
+
+                <!-- Olho Chorando -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">3</div>
+                    <div class="symbol-icon">👁️‍🗨️💧</div>
+                    <h3 class="symbol-name">OLHO CHORANDO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">CEGO</span>
+                        <span class="tag tag-blue">PERCEPÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Olho chorando (cego)</p>
+                </div>
+
+                <!-- Oito Deitado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">4</div>
+                    <div class="symbol-icon">⛓️∞</div>
+                    <h3 class="symbol-name">OITO DEITADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">CORRENTES</span>
+                        <span class="tag tag-red">CONEXÃO</span>
+                    </div>
+                    <p class="symbol-description">8 deitado (correntes)</p>
+                </div>
+
+                <!-- Linha com Traço -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">5</div>
+                    <div class="symbol-icon">─|─</div>
+                    <h3 class="symbol-name">LINHA COM TRAÇO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">SILÊNCIO</span>
+                        <span class="tag tag-green">COMUNICAÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Uma linha horizontal com um pequeno traço vertical no meio (silêncio)</p>
+                </div>
+
+                <!-- Asas -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">6</div>
+                    <div class="symbol-icon">🕊️</div>
+                    <h3 class="symbol-name">ASAS</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-purple">LIBERDADE</span>
+                        <span class="tag tag-purple">MOVIMENTO</span>
+                    </div>
+                    <p class="symbol-description">Um par de asas (Liberdade)</p>
+                </div>
+
+                <!-- Sol -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">7</div>
+                    <div class="symbol-icon">☀️</div>
+                    <h3 class="symbol-name">SOL</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-yellow">ORDEM DA ILUMINAÇÃO</span>
+                        <span class="tag tag-yellow">SABEDORIA</span>
+                    </div>
+                    <p class="symbol-description">Um sol (Ordem da Iluminação)</p>
+                </div>
+
+                <!-- Lua Crescente -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">8</div>
+                    <div class="symbol-icon">🌙</div>
+                    <h3 class="symbol-name">LUA CRESCENTE</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">SONHADOR</span>
+                        <span class="tag tag-blue">INTUIÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Lua Crescente (sonhador)</p>
+                </div>
+
+                <!-- Ampulheta -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">9</div>
+                    <div class="symbol-icon">⏳</div>
+                    <h3 class="symbol-name">AMPULHETA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-gold">ETERNIDADE</span>
+                        <span class="tag tag-gold">TEMPO</span>
+                    </div>
+                    <p class="symbol-description">Ampulheta (eternidade)</p>
+                </div>
+
+                <!-- Cristal -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">10</div>
+                    <div class="symbol-icon">💎</div>
+                    <h3 class="symbol-name">CRISTAL</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">PURO</span>
+                        <span class="tag tag-blue">PUREZA</span>
+                    </div>
+                    <p class="symbol-description">Um Cristal (Puro)</p>
+                </div>
+
+                <!-- Broto -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">11</div>
+                    <div class="symbol-icon">🌱</div>
+                    <h3 class="symbol-name">BROTO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">O JOVEM</span>
+                        <span class="tag tag-green">CRESCIMENTO</span>
+                    </div>
+                    <p class="symbol-description">Um broto de planta (O jovem)</p>
+                </div>
+
+                <!-- Estrela -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">12</div>
+                    <div class="symbol-icon">⭐</div>
+                    <h3 class="symbol-name">ESTRELA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-yellow">O VIAJANTE</span>
+                        <span class="tag tag-yellow">JORNADA</span>
+                    </div>
+                    <p class="symbol-description">Uma Estrela (O Viajante)</p>
+                </div>
+
+                <!-- Teia -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">13</div>
+                    <div class="symbol-icon">🕸️</div>
+                    <h3 class="symbol-name">TEIA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-purple">CONEXÃO</span>
+                        <span class="tag tag-purple">RELACIONAMENTO</span>
+                    </div>
+                    <p class="symbol-description">Uma teia de aranha (Conexão)</p>
+                </div>
+
+                <!-- Escudo -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">14</div>
+                    <div class="symbol-icon">🛡️</div>
+                    <h3 class="symbol-name">ESCUDO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">GUARDIÃO</span>
+                        <span class="tag tag-blue">PROTEÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Um escudo (Guardião)</p>
+                </div>
+
+                <!-- Dragão -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">15</div>
+                    <div class="symbol-icon">🐉</div>
+                    <h3 class="symbol-name">DRAGÃO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">PODER</span>
+                        <span class="tag tag-red">FORÇA</span>
+                    </div>
+                    <p class="symbol-description">Dragão (Poder)</p>
+                </div>
+
+                <!-- Espelho Quebrado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">16</div>
+                    <div class="symbol-icon">💔🪞</div>
+                    <h3 class="symbol-name">ESPELHO QUEBRADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">MENTIRA</span>
+                        <span class="tag tag-red">ILUSÃO</span>
+                    </div>
+                    <p class="symbol-description">Espelho quebrado (Mentira)</p>
+                </div>
+
+                <!-- Linhas Paralelas -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">17</div>
+                    <div class="symbol-icon">‖─‖</div>
+                    <h3 class="symbol-name">LINHAS PARALELAS</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-purple">PAR</span>
+                        <span class="tag tag-purple">DUALIDADE</span>
+                    </div>
+                    <p class="symbol-description">Duas linhas paralelas conectadas por um traço (par)</p>
+                </div>
+
+                <!-- Linha Ramificada -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">18</div>
+                    <div class="symbol-icon">╎╵</div>
+                    <h3 class="symbol-name">LINHA RAMIFICADA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">ÍMPAR</span>
+                        <span class="tag tag-green">SINGULARIDADE</span>
+                    </div>
+                    <p class="symbol-description">Linha vertical com ramificação irregular (ímpar)</p>
+                </div>
+
+                <!-- Quadrado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">19</div>
+                    <div class="symbol-icon">⬛</div>
+                    <h3 class="symbol-name">QUADRADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">4</span>
+                        <span class="tag tag-blue">ESTRUTURA</span>
+                    </div>
+                    <p class="symbol-description">Um quadrado (4)</p>
+                </div>
+
+                <!-- Olho Azul -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">20</div>
+                    <div class="symbol-icon">👁️‍🗨️☁️</div>
+                    <h3 class="symbol-name">OLHO AZUL</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">VERDADE</span>
+                        <span class="tag tag-blue">CLAREZA</span>
+                    </div>
+                    <p class="symbol-description">Um olho refletindo o céu Azul (Verdade)</p>
+                </div>
+
+                <!-- Noite sem Lua -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">21</div>
+                    <div class="symbol-icon">🌑</div>
+                    <h3 class="symbol-name">NOITE SEM LUA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">TREVAS</span>
+                        <span class="tag tag-red">ESCURIDÃO</span>
+                    </div>
+                    <p class="symbol-description">Uma noite sem lua (Trevas)</p>
+                </div>
+
+                <!-- Céu Limpo -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">22</div>
+                    <div class="symbol-icon">☀️☁️</div>
+                    <h3 class="symbol-name">CÉU LIMPO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-yellow">LUZ</span>
+                        <span class="tag tag-yellow">ILUMINAÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Um céu sem nuvens (Luz)</p>
+                </div>
+
+                <!-- Santo -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">23</div>
+                    <div class="symbol-icon">✨👤</div>
+                    <h3 class="symbol-name">SANTO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-gold">SANTO</span>
+                        <span class="tag tag-gold">ESPIRITUALIDADE</span>
+                    </div>
+                    <p class="symbol-description">Uma pessoa envolta de luz (Santo)</p>
+                </div>
+
+                <!-- Máscara Quebrada -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">24</div>
+                    <div class="symbol-icon">🎭💔</div>
+                    <h3 class="symbol-name">MÁSCARA QUEBRADA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">ENGANADOR</span>
+                        <span class="tag tag-red">ENGANO</span>
+                    </div>
+                    <p class="symbol-description">Uma máscara quebrada (Enganador)</p>
+                </div>
+
+                <!-- Eco -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">25</div>
+                    <div class="symbol-icon">🔊</div>
+                    <h3 class="symbol-name">ECO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">ECO</span>
+                        <span class="tag tag-green">RESSONÂNCIA</span>
+                    </div>
+                    <p class="symbol-description">Ondas concentradas saindo de um centro (Eco)</p>
+                </div>
+
+                <!-- O Procurado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">26</div>
+                    <div class="symbol-icon">🎯🏹</div>
+                    <h3 class="symbol-name">O PROCURADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-orange">DESTINO</span>
+                        <span class="tag tag-orange">ALVO</span>
+                    </div>
+                    <p class="symbol-description">Um alvo cheio de flechas (O Procurado)</p>
+                </div>
+
+                <!-- Amor -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">27</div>
+                    <div class="symbol-icon">❤️‍🩹</div>
+                    <h3 class="symbol-name">AMOR</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">AMOR</span>
+                        <span class="tag tag-red">EMOÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Um coração com espinhos encravados (Amor)</p>
+                </div>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-number" id="symbol-count">27</div>
+                        <div class="stat-label">SÍMBOLOS CATALOGADOS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="category-count">27</div>
+                        <div class="stat-label">CATEGORIAS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">MARCADOS</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lore Tab Content -->
+            <div id="lore-content" class="tab-content">
+                <div class="lore-section">
+                    <div class="lore-card">
+                        <h2 class="lore-title">📜 PROJETO ORIGEM</h2>
+                        <div class="lore-content-text">
+                            <p>O projeto da ORIGEM consiste em criar um Artefato supremo que guiará nosso povo até a fonte de todas as coisas.</p>
+                            
+                            <h3>Especificações do Projeto:</h3>
+                            <ul class="lore-list">
+                                <li>A ORIGEM terá comando total sobre nossas leis, costumes, regras, hierarquia.</li>
+                                <li>A ORIGEM deve ter todo conhecimento já registrado por nosso povo, incluindo todo tipo de magia.</li>
+                                <li>A ORIGEM deve ter acesso à Mente de todo ser sapiente.</li>
+                                <li>A ORIGEM deve ser 2 Canais de acesso, um mais ao sul para refrigeração e outro no distrito 1 por motivos administrativos.</li>
+                                <li>As ordens da ORIGEM devem ser absolutas.</li>
+                                <li>A ORIGEM deve ter Mana suficiente para funcionar por no mínimo 5 mil ciclos solares.</li>
+                                <li>Em caso da mana da origem acabar a ORIGEM deve entrar em um modo de repouso de 300 ciclos Solares.</li>
+                                <li>A ORIGEM deve priorizar a Descoberta da fonte de tudo acima de qualquer custo.</li>
+                                <li class="warning">⚠️ A ORIGEM não deve ter um corpo físico em hipótese alguma, ela não é feita para isso, risco de Singularidade</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="lore-card">
+                        <h2 class="lore-title">🔮 SISTEMA RÚNICO</h2>
+                        <div class="lore-content-text">
+                            <p>A Língua dos Antigos é baseada em símbolos sagrados, cada um carregando significados profundos e poder arcano. Estes símbolos formam a base de toda comunicação e magia em nosso mundo.</p>
+                            
+                            <h3>Características dos Símbolos:</h3>
+                            <ul class="lore-list">
+                                <li>Cada símbolo possui múltiplas camadas de significado</li>
+                                <li>Podem ser combinados para formar feitiços complexos</li>
+                                <li>Sua origem remonta aos primeiros habitantes desta terra</li>
+                                <li>O conhecimento completo foi perdido com o tempo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Rune Tab Content -->
+            <div id="add-rune-content" class="tab-content">
+                <div class="add-rune-section">
+                    <h2 class="section-title">✨ ADICIONAR NOVO SÍMBOLO</h2>
+                    
+                    <form class="rune-form" id="rune-form">
+                        <div class="form-group">
+                            <label for="rune-icon">Ícone/Símbolo:</label>
+                            <input type="text" id="rune-icon" placeholder="Ex: 🔥, ⚡, 🌟" maxlength="10" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-name">Nome do Símbolo:</label>
+                            <input type="text" id="rune-name" placeholder="Ex: CHAMA, TROVÃO" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-tags">Tags (separadas por vírgula):</label>
+                            <input type="text" id="rune-tags" placeholder="Ex: ENERGIA, PODER, FOGO" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-description">Descrição:</label>
+                            <textarea id="rune-description" placeholder="Descreva o significado e uso do símbolo na Língua dos Antigos..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-category">Categoria:</label>
+                            <select id="rune-category" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="runic">Símbolos Rúnicos</option>
+                                <option value="origin">Projeto Origem</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-icon">✨</span>
+                            ADICIONAR SÍMBOLO
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabName = this.dataset.tab;
+                document.getElementById(tabName + '-content').classList.add('active');
+            });
+        });
+
+        // Filter functionality for symbols
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all filter tabs
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Filter logic
+                const filter = this.dataset.filter;
+                const cards = document.querySelectorAll('.symbol-card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        document.getElementById('symbol-search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.symbol-card');
+            
+            cards.forEach(card => {
+                const name = card.querySelector('.symbol-name').textContent.toLowerCase();
+                const description = card.querySelector('.symbol-description').textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
+                
+                if (name.includes(searchTerm) || description.includes(searchTerm) || tags.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Add rune functionality
+        document.getElementById('rune-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const icon = document.getElementById('rune-icon').value;
+            const name = document.getElementById('rune-name').value.toUpperCase();
+            const tags = document.getElementById('rune-tags').value.split(',').map(tag => tag.trim().toUpperCase());
+            const description = document.getElementById('rune-description').value;
+            const category = document.getElementById('rune-category').value;
+            
+            // Generate random card number
+            const cardNumber = Math.floor(Math.random() * 100) + 1;
+            
+            // Create new symbol card
+            const newCard = document.createElement('div');
+            newCard.className = 'symbol-card';
+            newCard.dataset.category = category;
+            
+            // Generate tag colors
+            const tagColors = ['orange', 'blue', 'red', 'green', 'purple', 'yellow', 'gold'];
+            
+            newCard.innerHTML = `
+                <div class="card-number">${cardNumber}</div>
+                <div class="symbol-icon">${icon}</div>
+                <h3 class="symbol-name">${name}</h3>
+                <div class="symbol-tags">
+                    ${tags.map(tag => `<span class="tag tag-${tagColors[Math.floor(Math.random() * tagColors.length)]}">${tag}</span>`).join('')}
+                </div>
+                <p class="symbol-description">${description}</p>
+            `;
+            
+            // Add to symbols grid
+            document.getElementById('symbols-grid').appendChild(newCard);
+            
+            // Update counters
+            const symbolCount = document.querySelectorAll('.symbol-card').length;
+            document.getElementById('symbol-count').textContent = symbolCount;
+            document.getElementById('category-count').textContent = symbolCount;
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            alert('Símbolo adicionado com sucesso! 🎉');
+            
+            // Switch to symbols tab
+            document.querySelector('[data-tab="symbols"]').click();
+        });
+    </script>
+</body>
+</html>
+

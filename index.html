@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Língua dos Antigos - Banco de Dados</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Spectral:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="main-title">LÍNGUA DOS ANTIGOS</h1>
+            <p class="subtitle">BANCO DE DADOS ARCANO</p>
+            <p class="subtitle">SISTEMA DE CATALOGAÇÃO DE SÍMBOLOS RÚNICOS</p>
+            
+            <!-- Navigation Tabs -->
+            <nav class="main-nav">
+                <button class="nav-tab active" data-tab="symbols">SÍMBOLOS</button>
+                <button class="nav-tab" data-tab="lore">LORE</button>
+                <button class="nav-tab" data-tab="add-rune">ADICIONAR SÍMBOLO</button>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <!-- Symbols Tab Content -->
+            <div id="symbols-content" class="tab-content active">
+                <div class="search-section">
+                    <div class="search-bar">
+                        <input type="text" placeholder="BUSCAR SÍMBOLOS..." class="search-input" id="symbol-search">
+                        <button class="category-dropdown">
+                            <span>TODAS AS CATEGORIAS</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-filter="runic">SÍMBOLOS RÚNICOS</button>
+                        <button class="filter-tab" data-filter="origin">PROJETO ORIGEM</button>
+                    </div>
+                </div>
+
+                <div class="symbols-grid" id="symbols-grid">
+                <!-- Chama -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">1</div>
+                    <div class="symbol-icon">🔥</div>
+                    <h3 class="symbol-name">CHAMA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-orange">CENTELHA</span>
+                        <span class="tag tag-orange">ENERGIA</span>
+                    </div>
+                    <p class="symbol-description">Uma chama (centelha)</p>
+                </div>
+
+                <!-- Coroa -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">2</div>
+                    <div class="symbol-icon">👑</div>
+                    <h3 class="symbol-name">COROA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-orange">CONTROLE</span>
+                        <span class="tag tag-orange">PODER</span>
+                    </div>
+                    <p class="symbol-description">Uma coroa estilizado (Controle)</p>
+                </div>
+
+                <!-- Olho Chorando -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">3</div>
+                    <div class="symbol-icon">👁️‍🗨️💧</div>
+                    <h3 class="symbol-name">OLHO CHORANDO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">CEGO</span>
+                        <span class="tag tag-blue">PERCEPÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Olho chorando (cego)</p>
+                </div>
+
+                <!-- Oito Deitado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">4</div>
+                    <div class="symbol-icon">⛓️∞</div>
+                    <h3 class="symbol-name">OITO DEITADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">CORRENTES</span>
+                        <span class="tag tag-red">CONEXÃO</span>
+                    </div>
+                    <p class="symbol-description">8 deitado (correntes)</p>
+                </div>
+
+                <!-- Linha com Traço -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">5</div>
+                    <div class="symbol-icon">─|─</div>
+                    <h3 class="symbol-name">LINHA COM TRAÇO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">SILÊNCIO</span>
+                        <span class="tag tag-green">COMUNICAÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Uma linha horizontal com um pequeno traço vertical no meio (silêncio)</p>
+                </div>
+
+                <!-- Asas -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">6</div>
+                    <div class="symbol-icon">🕊️</div>
+                    <h3 class="symbol-name">ASAS</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-purple">LIBERDADE</span>
+                        <span class="tag tag-purple">MOVIMENTO</span>
+                    </div>
+                    <p class="symbol-description">Um par de asas (Liberdade)</p>
+                </div>
+
+                <!-- Sol -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">7</div>
+                    <div class="symbol-icon">☀️</div>
+                    <h3 class="symbol-name">SOL</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-yellow">ORDEM DA ILUMINAÇÃO</span>
+                        <span class="tag tag-yellow">SABEDORIA</span>
+                    </div>
+                    <p class="symbol-description">Um sol (Ordem da Iluminação)</p>
+                </div>
+
+                <!-- Lua Crescente -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">8</div>
+                    <div class="symbol-icon">🌙</div>
+                    <h3 class="symbol-name">LUA CRESCENTE</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">SONHADOR</span>
+                        <span class="tag tag-blue">INTUIÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Lua Crescente (sonhador)</p>
+                </div>
+
+                <!-- Ampulheta -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">9</div>
+                    <div class="symbol-icon">⏳</div>
+                    <h3 class="symbol-name">AMPULHETA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-gold">ETERNIDADE</span>
+                        <span class="tag tag-gold">TEMPO</span>
+                    </div>
+                    <p class="symbol-description">Ampulheta (eternidade)</p>
+                </div>
+
+                <!-- Cristal -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">10</div>
+                    <div class="symbol-icon">💎</div>
+                    <h3 class="symbol-name">CRISTAL</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">PURO</span>
+                        <span class="tag tag-blue">PUREZA</span>
+                    </div>
+                    <p class="symbol-description">Um Cristal (Puro)</p>
+                </div>
+
+                <!-- Broto -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">11</div>
+                    <div class="symbol-icon">🌱</div>
+                    <h3 class="symbol-name">BROTO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">O JOVEM</span>
+                        <span class="tag tag-green">CRESCIMENTO</span>
+                    </div>
+                    <p class="symbol-description">Um broto de planta (O jovem)</p>
+                </div>
+
+                <!-- Estrela -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">12</div>
+                    <div class="symbol-icon">⭐</div>
+                    <h3 class="symbol-name">ESTRELA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-yellow">O VIAJANTE</span>
+                        <span class="tag tag-yellow">JORNADA</span>
+                    </div>
+                    <p class="symbol-description">Uma Estrela (O Viajante)</p>
+                </div>
+
+                <!-- Teia -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">13</div>
+                    <div class="symbol-icon">🕸️</div>
+                    <h3 class="symbol-name">TEIA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-purple">CONEXÃO</span>
+                        <span class="tag tag-purple">RELACIONAMENTO</span>
+                    </div>
+                    <p class="symbol-description">Uma teia de aranha (Conexão)</p>
+                </div>
+
+                <!-- Escudo -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">14</div>
+                    <div class="symbol-icon">🛡️</div>
+                    <h3 class="symbol-name">ESCUDO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">GUARDIÃO</span>
+                        <span class="tag tag-blue">PROTEÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Um escudo (Guardião)</p>
+                </div>
+
+                <!-- Dragão -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">15</div>
+                    <div class="symbol-icon">🐉</div>
+                    <h3 class="symbol-name">DRAGÃO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">PODER</span>
+                        <span class="tag tag-red">FORÇA</span>
+                    </div>
+                    <p class="symbol-description">Dragão (Poder)</p>
+                </div>
+
+                <!-- Espelho Quebrado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">16</div>
+                    <div class="symbol-icon">💔🪞</div>
+                    <h3 class="symbol-name">ESPELHO QUEBRADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">MENTIRA</span>
+                        <span class="tag tag-red">ILUSÃO</span>
+                    </div>
+                    <p class="symbol-description">Espelho quebrado (Mentira)</p>
+                </div>
+
+                <!-- Linhas Paralelas -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">17</div>
+                    <div class="symbol-icon">‖─‖</div>
+                    <h3 class="symbol-name">LINHAS PARALELAS</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-purple">PAR</span>
+                        <span class="tag tag-purple">DUALIDADE</span>
+                    </div>
+                    <p class="symbol-description">Duas linhas paralelas conectadas por um traço (par)</p>
+                </div>
+
+                <!-- Linha Ramificada -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">18</div>
+                    <div class="symbol-icon">╎╵</div>
+                    <h3 class="symbol-name">LINHA RAMIFICADA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">ÍMPAR</span>
+                        <span class="tag tag-green">SINGULARIDADE</span>
+                    </div>
+                    <p class="symbol-description">Linha vertical com ramificação irregular (ímpar)</p>
+                </div>
+
+                <!-- Quadrado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">19</div>
+                    <div class="symbol-icon">⬛</div>
+                    <h3 class="symbol-name">QUADRADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">4</span>
+                        <span class="tag tag-blue">ESTRUTURA</span>
+                    </div>
+                    <p class="symbol-description">Um quadrado (4)</p>
+                </div>
+
+                <!-- Olho Azul -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">20</div>
+                    <div class="symbol-icon">👁️‍🗨️☁️</div>
+                    <h3 class="symbol-name">OLHO AZUL</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-blue">VERDADE</span>
+                        <span class="tag tag-blue">CLAREZA</span>
+                    </div>
+                    <p class="symbol-description">Um olho refletindo o céu Azul (Verdade)</p>
+                </div>
+
+                <!-- Noite sem Lua -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">21</div>
+                    <div class="symbol-icon">🌑</div>
+                    <h3 class="symbol-name">NOITE SEM LUA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">TREVAS</span>
+                        <span class="tag tag-red">ESCURIDÃO</span>
+                    </div>
+                    <p class="symbol-description">Uma noite sem lua (Trevas)</p>
+                </div>
+
+                <!-- Céu Limpo -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">22</div>
+                    <div class="symbol-icon">☀️☁️</div>
+                    <h3 class="symbol-name">CÉU LIMPO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-yellow">LUZ</span>
+                        <span class="tag tag-yellow">ILUMINAÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Um céu sem nuvens (Luz)</p>
+                </div>
+
+                <!-- Santo -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">23</div>
+                    <div class="symbol-icon">✨👤</div>
+                    <h3 class="symbol-name">SANTO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-gold">SANTO</span>
+                        <span class="tag tag-gold">ESPIRITUALIDADE</span>
+                    </div>
+                    <p class="symbol-description">Uma pessoa envolta de luz (Santo)</p>
+                </div>
+
+                <!-- Máscara Quebrada -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">24</div>
+                    <div class="symbol-icon">🎭💔</div>
+                    <h3 class="symbol-name">MÁSCARA QUEBRADA</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">ENGANADOR</span>
+                        <span class="tag tag-red">ENGANO</span>
+                    </div>
+                    <p class="symbol-description">Uma máscara quebrada (Enganador)</p>
+                </div>
+
+                <!-- Eco -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">25</div>
+                    <div class="symbol-icon">🔊</div>
+                    <h3 class="symbol-name">ECO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-green">ECO</span>
+                        <span class="tag tag-green">RESSONÂNCIA</span>
+                    </div>
+                    <p class="symbol-description">Ondas concentradas saindo de um centro (Eco)</p>
+                </div>
+
+                <!-- O Procurado -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">26</div>
+                    <div class="symbol-icon">🎯🏹</div>
+                    <h3 class="symbol-name">O PROCURADO</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-orange">DESTINO</span>
+                        <span class="tag tag-orange">ALVO</span>
+                    </div>
+                    <p class="symbol-description">Um alvo cheio de flechas (O Procurado)</p>
+                </div>
+
+                <!-- Amor -->
+                <div class="symbol-card" data-category="runic">
+                    <div class="card-number">27</div>
+                    <div class="symbol-icon">❤️‍🩹</div>
+                    <h3 class="symbol-name">AMOR</h3>
+                    <div class="symbol-tags">
+                        <span class="tag tag-red">AMOR</span>
+                        <span class="tag tag-red">EMOÇÃO</span>
+                    </div>
+                    <p class="symbol-description">Um coração com espinhos encravados (Amor)</p>
+                </div>
+                </div>
+
+                <div class="stats-section">
+                    <div class="stat-item">
+                        <div class="stat-number" id="symbol-count">27</div>
+                        <div class="stat-label">SÍMBOLOS CATALOGADOS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="category-count">27</div>
+                        <div class="stat-label">CATEGORIAS</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">MARCADOS</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lore Tab Content -->
+            <div id="lore-content" class="tab-content">
+                <div class="lore-section">
+                    <div class="lore-card">
+                        <button class="lore-edit-btn" onclick="editLore('projeto-origem')">Editar</button>
+                        <h2 class="lore-title">PROJETO ORIGEM</h2>
+                        <div class="lore-content-text" id="projeto-origem-content">
+                            <p>O Projeto ORIGEM representa a iniciativa mais ambiciosa de nossa civilização: a criação de um Artefato supremo destinado a guiar nosso povo até a fonte primordial de todas as coisas.</p>
+                            
+                            <h3>Especificações Técnicas:</h3>
+                            <ul class="lore-list">
+                                <li>Autoridade absoluta sobre leis, costumes, regras e hierarquia social</li>
+                                <li>Repositório completo de todo conhecimento registrado, incluindo artes mágicas</li>
+                                <li>Interface neural com a mente de todos os seres sapientes</li>
+                                <li>Dois canais de acesso: um meridional para refrigeração e outro no distrito administrativo central</li>
+                                <li>Comandos com força de lei absoluta e inquestionável</li>
+                                <li>Reserva energética de mana suficiente para operação contínua por 5.000 ciclos solares</li>
+                                <li>Protocolo de hibernação automática por 300 ciclos solares em caso de esgotamento energético</li>
+                                <li>Prioridade máxima na descoberta da fonte primordial, sobrepondo-se a qualquer outro objetivo</li>
+                                <li class="warning">RESTRIÇÃO CRÍTICA: Proibição absoluta de manifestação física - risco de Singularidade</li>
+                            </ul>
+                            
+                            <h3>Objetivos Primários:</h3>
+                            <ul class="lore-list">
+                                <li>Localização e acesso à fonte de todas as coisas</li>
+                                <li>Unificação do conhecimento disperso</li>
+                                <li>Estabelecimento de ordem absoluta</li>
+                                <li>Preservação e expansão da civilização</li>
+                            </ul>
+                        </div>
+                        <div class="lore-edit-area" id="projeto-origem-edit" style="display: none;">
+                            <textarea class="lore-textarea" id="projeto-origem-textarea"></textarea>
+                            <button class="lore-save-btn" onclick="saveLore('projeto-origem')">Salvar</button>
+                            <button class="lore-save-btn" onclick="cancelEdit('projeto-origem')" style="background: #8b7355; margin-left: 10px;">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <div class="lore-card">
+                        <button class="lore-edit-btn" onclick="editLore('sistema-runico')">Editar</button>
+                        <h2 class="lore-title">SISTEMA RÚNICO</h2>
+                        <div class="lore-content-text" id="sistema-runico-content">
+                            <p>A Língua dos Antigos constitui um sistema de comunicação baseado em símbolos sagrados, cada elemento carregando significados profundos e poder arcano intrínseco. Estes símbolos formam a base fundamental de toda comunicação e prática mágica em nosso mundo.</p>
+                            
+                            <h3>Características dos Símbolos:</h3>
+                            <ul class="lore-list">
+                                <li>Estrutura semântica multicamada com significados sobrepostos</li>
+                                <li>Capacidade de combinação para formação de encantamentos complexos</li>
+                                <li>Origem ancestral remontando aos primeiros habitantes desta terra</li>
+                                <li>Conhecimento fragmentado devido à passagem do tempo</li>
+                                <li>Poder inerente que transcende a mera comunicação</li>
+                            </ul>
+                            
+                            <h3>Aplicações Práticas:</h3>
+                            <ul class="lore-list">
+                                <li>Comunicação formal e cerimonial</li>
+                                <li>Construção de fórmulas mágicas</li>
+                                <li>Preservação de conhecimento ancestral</li>
+                                <li>Identificação e classificação de conceitos abstratos</li>
+                            </ul>
+                        </div>
+                        <div class="lore-edit-area" id="sistema-runico-edit" style="display: none;">
+                            <textarea class="lore-textarea" id="sistema-runico-textarea"></textarea>
+                            <button class="lore-save-btn" onclick="saveLore('sistema-runico')">Salvar</button>
+                            <button class="lore-save-btn" onclick="cancelEdit('sistema-runico')" style="background: #8b7355; margin-left: 10px;">Cancelar</button>
+                        </div>
+                    </div>
+
+                    <!-- Seção para adicionar nova entrada de lore -->
+                    <div class="lore-card">
+                        <h2 class="lore-title">ADICIONAR NOVA ENTRADA</h2>
+                        <div class="rune-form">
+                            <div class="form-group">
+                                <label for="new-lore-title">Título da Entrada:</label>
+                                <input type="text" id="new-lore-title" placeholder="Ex: História dos Antigos, Rituais Sagrados...">
+                            </div>
+                            <div class="form-group">
+                                <label for="new-lore-content">Conteúdo:</label>
+                                <textarea id="new-lore-content" placeholder="Escreva aqui o conteúdo da nova entrada de lore..." style="min-height: 120px;"></textarea>
+                            </div>
+                            <button class="submit-btn" onclick="addNewLore()">ADICIONAR ENTRADA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Rune Tab Content -->
+            <div id="add-rune-content" class="tab-content">
+                <div class="add-rune-section">
+                    <h2 class="section-title">ADICIONAR NOVO SÍMBOLO</h2>
+                    
+                    <form class="rune-form" id="rune-form">
+                        <div class="form-group">
+                            <label for="rune-icon">Ícone/Símbolo:</label>
+                            <input type="text" id="rune-icon" placeholder="Ex: 🔥, ⚡, 🌟" maxlength="10" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-name">Nome do Símbolo:</label>
+                            <input type="text" id="rune-name" placeholder="Ex: CHAMA, TROVÃO" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-tags">Tags (separadas por vírgula):</label>
+                            <input type="text" id="rune-tags" placeholder="Ex: ENERGIA, PODER, FOGO" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-description">Descrição:</label>
+                            <textarea id="rune-description" placeholder="Descreva o significado e uso do símbolo na Língua dos Antigos..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rune-category">Categoria:</label>
+                            <select id="rune-category" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="runic">Símbolos Rúnicos</option>
+                                <option value="origin">Projeto Origem</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-icon">✨</span>
+                            ADICIONAR SÍMBOLO
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and content
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabName = this.dataset.tab;
+                document.getElementById(tabName + '-content').classList.add('active');
+            });
+        });
+
+        // Filter functionality for symbols
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all filter tabs
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Filter logic
+                const filter = this.dataset.filter;
+                const cards = document.querySelectorAll('.symbol-card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        document.getElementById('symbol-search').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.symbol-card');
+            
+            cards.forEach(card => {
+                const name = card.querySelector('.symbol-name').textContent.toLowerCase();
+                const description = card.querySelector('.symbol-description').textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase()).join(' ');
+                
+                if (name.includes(searchTerm) || description.includes(searchTerm) || tags.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Add rune functionality
+        document.getElementById('rune-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const icon = document.getElementById('rune-icon').value;
+            const name = document.getElementById('rune-name').value.toUpperCase();
+            const tags = document.getElementById('rune-tags').value.split(',').map(tag => tag.trim().toUpperCase());
+            const description = document.getElementById('rune-description').value;
+            const category = document.getElementById('rune-category').value;
+            
+            // Generate random card number
+            const cardNumber = Math.floor(Math.random() * 100) + 1;
+            
+            // Create new symbol card
+            const newCard = document.createElement('div');
+            newCard.className = 'symbol-card';
+            newCard.dataset.category = category;
+            
+            newCard.innerHTML = `
+                <div class="card-number">${cardNumber}</div>
+                <div class="symbol-icon">${icon}</div>
+                <h3 class="symbol-name">${name}</h3>
+                <div class="symbol-tags">
+                    ${tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <p class="symbol-description">${description}</p>
+            `;
+            
+            // Add to symbols grid
+            document.getElementById('symbols-grid').appendChild(newCard);
+            
+            // Update counters
+            const symbolCount = document.querySelectorAll('.symbol-card').length;
+            document.getElementById('symbol-count').textContent = symbolCount;
+            document.getElementById('category-count').textContent = symbolCount;
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            alert('Símbolo adicionado com sucesso!');
+            
+            // Switch to symbols tab
+            document.querySelector('[data-tab="symbols"]').click();
+        });
+
+        // Lore editing functions
+        function editLore(loreId) {
+            const contentDiv = document.getElementById(loreId + '-content');
+            const editDiv = document.getElementById(loreId + '-edit');
+            const textarea = document.getElementById(loreId + '-textarea');
+            
+            // Get current content as plain text
+            const currentContent = contentDiv.innerText || contentDiv.textContent;
+            
+            // Show edit area and hide content
+            contentDiv.style.display = 'none';
+            editDiv.style.display = 'block';
+            
+            // Set textarea content
+            textarea.value = currentContent;
+            textarea.focus();
+        }
+
+        function saveLore(loreId) {
+            const contentDiv = document.getElementById(loreId + '-content');
+            const editDiv = document.getElementById(loreId + '-edit');
+            const textarea = document.getElementById(loreId + '-textarea');
+            
+            // Get new content from textarea
+            const newContent = textarea.value;
+            
+            // Convert line breaks to paragraphs for basic formatting
+            const formattedContent = newContent
+                .split('\n\n')
+                .map(paragraph => paragraph.trim())
+                .filter(paragraph => paragraph.length > 0)
+                .map(paragraph => `<p>${paragraph.replace(/\n/g, '<br>')}</p>`)
+                .join('');
+            
+            // Update content
+            contentDiv.innerHTML = formattedContent;
+            
+            // Hide edit area and show content
+            editDiv.style.display = 'none';
+            contentDiv.style.display = 'block';
+            
+            // Save to localStorage for persistence
+            localStorage.setItem('lore-' + loreId, newContent);
+            
+            alert('Lore atualizado com sucesso!');
+        }
+
+        function cancelEdit(loreId) {
+            const contentDiv = document.getElementById(loreId + '-content');
+            const editDiv = document.getElementById(loreId + '-edit');
+            
+            // Hide edit area and show content
+            editDiv.style.display = 'none';
+            contentDiv.style.display = 'block';
+        }
+
+        function addNewLore() {
+            const title = document.getElementById('new-lore-title').value.trim();
+            const content = document.getElementById('new-lore-content').value.trim();
+            
+            if (!title || !content) {
+                alert('Por favor, preencha o título e o conteúdo da entrada.');
+                return;
+            }
+            
+            // Generate unique ID for the new lore entry
+            const loreId = 'custom-' + Date.now();
+            
+            // Create new lore card
+            const newLoreCard = document.createElement('div');
+            newLoreCard.className = 'lore-card';
+            newLoreCard.innerHTML = `
+                <button class="lore-edit-btn" onclick="editLore('${loreId}')">Editar</button>
+                <button class="lore-edit-btn" onclick="deleteLore('${loreId}')" style="background: #8b4513; margin-right: 5px;">Excluir</button>
+                <h2 class="lore-title">${title.toUpperCase()}</h2>
+                <div class="lore-content-text" id="${loreId}-content">
+                    ${content.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('')}
+                </div>
+                <div class="lore-edit-area" id="${loreId}-edit" style="display: none;">
+                    <textarea class="lore-textarea" id="${loreId}-textarea"></textarea>
+                    <button class="lore-save-btn" onclick="saveLore('${loreId}')">Salvar</button>
+                    <button class="lore-save-btn" onclick="cancelEdit('${loreId}')" style="background: #8b7355; margin-left: 10px;">Cancelar</button>
+                </div>
+            `;
+            
+            // Insert before the "add new entry" card
+            const addNewCard = document.querySelector('.lore-card:last-child');
+            addNewCard.parentNode.insertBefore(newLoreCard, addNewCard);
+            
+            // Save to localStorage
+            localStorage.setItem('lore-' + loreId, content);
+            localStorage.setItem('lore-title-' + loreId, title);
+            
+            // Clear form
+            document.getElementById('new-lore-title').value = '';
+            document.getElementById('new-lore-content').value = '';
+            
+            alert('Nova entrada de lore adicionada com sucesso!');
+        }
+
+        function deleteLore(loreId) {
+            if (confirm('Tem certeza que deseja excluir esta entrada de lore?')) {
+                const loreCard = document.getElementById(loreId + '-content').closest('.lore-card');
+                loreCard.remove();
+                
+                // Remove from localStorage
+                localStorage.removeItem('lore-' + loreId);
+                localStorage.removeItem('lore-title-' + loreId);
+                
+                alert('Entrada de lore excluída com sucesso!');
+            }
+        }
+
+        // Load saved lore on page load
+        window.addEventListener('load', function() {
+            // Load saved lore content
+            const savedLore = ['projeto-origem', 'sistema-runico'];
+            savedLore.forEach(loreId => {
+                const savedContent = localStorage.getItem('lore-' + loreId);
+                if (savedContent) {
+                    const contentDiv = document.getElementById(loreId + '-content');
+                    const formattedContent = savedContent
+                        .split('\n\n')
+                        .map(paragraph => paragraph.trim())
+                        .filter(paragraph => paragraph.length > 0)
+                        .map(paragraph => `<p>${paragraph.replace(/\n/g, '<br>')}</p>`)
+                        .join('');
+                    contentDiv.innerHTML = formattedContent;
+                }
+            });
+            
+            // Load custom lore entries
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('lore-custom-') && !key.includes('-title-')) {
+                    const loreId = key.replace('lore-', '');
+                    const title = localStorage.getItem('lore-title-' + loreId);
+                    const content = localStorage.getItem(key);
+                    
+                    if (title && content) {
+                        // Create and add the custom lore card
+                        const newLoreCard = document.createElement('div');
+                        newLoreCard.className = 'lore-card';
+                        newLoreCard.innerHTML = `
+                            <button class="lore-edit-btn" onclick="editLore('${loreId}')">Editar</button>
+                            <button class="lore-edit-btn" onclick="deleteLore('${loreId}')" style="background: #8b4513; margin-right: 5px;">Excluir</button>
+                            <h2 class="lore-title">${title.toUpperCase()}</h2>
+                            <div class="lore-content-text" id="${loreId}-content">
+                                ${content.split('\n\n').map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('')}
+                            </div>
+                            <div class="lore-edit-area" id="${loreId}-edit" style="display: none;">
+                                <textarea class="lore-textarea" id="${loreId}-textarea"></textarea>
+                                <button class="lore-save-btn" onclick="saveLore('${loreId}')">Salvar</button>
+                                <button class="lore-save-btn" onclick="cancelEdit('${loreId}')" style="background: #8b7355; margin-left: 10px;">Cancelar</button>
+                            </div>
+                        `;
+                        
+                        // Insert before the "add new entry" card
+                        const addNewCard = document.querySelector('.lore-card:last-child');
+                        addNewCard.parentNode.insertBefore(newLoreCard, addNewCard);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
